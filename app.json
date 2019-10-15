@@ -9,14 +9,11 @@
       },
       "buildpacks": [
         {
-          "url": "https://github.com/heroku/heroku-buildpack-google-chrome"
-        },
-        {
           "url": "https://github.com/heroku-softtrends/heroku-buildpack-dotnetcore"
         }
       ],
       "scripts": {
-        "test-setup": "dotnet '/app/WebApplication2/WebApplication2.dll' >/dev/null 2>&1 & sleep 5"
+        "test-setup": "dotnet '/app/WebApplication2/WebApplication2.dll' >/dev/null 2>&1 & sleep 5",
         "test": "kill $(ps aux | grep 'WebApplication2.dll' | awk '{print $2}')"
       }
     }
