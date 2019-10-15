@@ -9,7 +9,10 @@
       },
       "buildpacks": [
         { "url": "https://github.com/heroku-softtrends/heroku-buildpack-dotnetcore" }
-      ]
+      ],
+	  "scripts": {
+        "test": "bundle exec rake test-compile"
+      }
     }
   }
 }
