@@ -13,7 +13,7 @@
         }
       ],
       "scripts": {
-        "test": "dotnet --info"
+        "test": "cd \$HOME/$PROJECT_NAME && ASPNETCORE_URLS='http://+:\$PORT' dotnet './$PROJECT_NAME.dll'"
       }
     }
   }
