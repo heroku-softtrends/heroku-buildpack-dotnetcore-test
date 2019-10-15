@@ -11,7 +11,10 @@
         {
           "url": "https://github.com/heroku-softtrends/heroku-buildpack-dotnetcore"
         }
-      ]
+      ],
+      "scripts": {
+        "test": "dotnet --info"
+      }
     }
   }
 }
