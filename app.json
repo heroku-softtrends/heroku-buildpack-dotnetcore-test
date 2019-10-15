@@ -16,7 +16,8 @@
         }
       ],
       "scripts": {
-        "test": "dotnet '/app/WebApplication2/WebApplication2.dll' && kill $(ps aux | grep 'WebApplication2.dll' | awk '{print $2}')"
+        "test-setup": "dotnet '/app/WebApplication2/WebApplication2.dll' >/dev/null 2>&1 & sleep 5"
+        "test": "kill $(ps aux | grep 'WebApplication2.dll' | awk '{print $2}')"
       }
     }
   }
