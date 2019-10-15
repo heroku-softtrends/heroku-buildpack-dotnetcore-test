@@ -13,7 +13,7 @@
         }
       ],
       "scripts": {
-        "test": "cd $HOME/$PROJECT_NAME && ASPNETCORE_URLS='http://+:$PORT' dotnet run"
+        "test": "dotnet '/app/WebApplication2/WebApplication2.dll'"
       }
     }
   }
