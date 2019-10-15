@@ -1,14 +1,16 @@
 {
   "environments": {
     "test": {
-	  "formation": {
-          "test": {
-            "quantity": 1,
-            "size": "Standard-1X"
-          }
+      "formation": {
+        "test": {
+          "quantity": 1,
+          "size": "Standard-1X"
+        }
       },
       "buildpacks": [
-        { "url": "https://github.com/heroku-softtrends/heroku-buildpack-dotnetcore" }
+        {
+          "url": "https://github.com/heroku-softtrends/heroku-buildpack-dotnetcore"
+        }
       ]
     }
   }
