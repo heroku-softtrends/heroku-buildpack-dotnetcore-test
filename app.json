@@ -1,0 +1,15 @@
+{
+  "environments": {
+    "test": {
+	  "formation": {
+          "test": {
+            "quantity": 1,
+            "size": "hobby"
+          }
+      },
+      "buildpacks": [
+        { "url": "https://github.com/heroku-softtrends/heroku-buildpack-dotnetcore" }
+      ]
+    }
+  }
+}
