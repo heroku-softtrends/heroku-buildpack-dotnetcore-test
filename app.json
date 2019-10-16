@@ -13,7 +13,7 @@
         }
       ],
       "scripts": {
-        "test-setup": "APP_ASSEMBLY=`grep -o '\".*\"' Procfile | perl -pe 's/.\///g' | perl -pe 's/.dll//g'` &  dotnet '/app/$APP_ASSEMBLY/$APP_ASSEMBLY.dll' >/dev/null 2>&1 & sleep 5",
+        "test-setup": "echo `grep -o '\".*\"' Procfile | perl -pe 's/.\///g' | perl -pe 's/.dll//g'` &  dotnet '/app/$APP_ASSEMBLY/$APP_ASSEMBLY.dll' >/dev/null 2>&1 & sleep 5",
         "test": "ps -ef | grep dotnet | grep -v grep | awk '{print $2}' | xargs kill"
       }
     }
