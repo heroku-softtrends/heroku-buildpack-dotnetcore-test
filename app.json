@@ -13,7 +13,7 @@
         }
       ],
       "scripts": {
-        "test-setup": "dotnet --version & echo $APP_ASSEMBLY & dotnet \"/app/$APP_ASSEMBLY/$APP_ASSEMBLY.dll\" >/dev/null 2>&1 & sleep 5",
+        "test-setup": "cd \/app/$APP_ASSEMBLY & dotnet --version & dotnet \"./$APP_ASSEMBLY.dll\" >/dev/null 2>&1 & sleep 5",
         "test": "ps -ef | grep dotnet | grep -v grep | awk '{print $2}' | xargs kill"
       }
     }
