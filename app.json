@@ -13,7 +13,7 @@
         }
       ],
       "scripts": {
-        "test-setup": "echo `$NETCORE_APP_ASSEMBLY` && cd /app/$$NETCORE_APP_ASSEMBLY && dotnet './$$NETCORE_APP_ASSEMBLY.dll' >/dev/null 2>&1 & sleep 5",
+        "test-setup": 'echo "$NETCORE_APP_ASSEMBLY" & dotnet "/app/$NETCORE_APP_ASSEMBLY/$NETCORE_APP_ASSEMBLY.dll" >/dev/null 2>&1 & sleep 5',
         "test": "ps -ef | grep dotnet | grep -v grep | awk '{print $2}' | xargs kill"
       }
     }
