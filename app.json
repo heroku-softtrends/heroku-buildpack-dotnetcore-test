@@ -13,7 +13,7 @@
         }
       ],
       "scripts": {
-        "test-setup": "dotnet '/app/WebApplication2/WebApplication2.dll' >/dev/null 2>&1 & sleep 5",
+        "test-setup": "echo '$NETCORE_APP_ASSEMBLY' &&  dotnet '/app/WebApplication2/WebApplication2.dll' >/dev/null 2>&1 & sleep 5",
         "test": "ps -ef | grep dotnet | grep -v grep | awk '{print $2}' | xargs kill"
       }
     }
