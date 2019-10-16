@@ -13,7 +13,7 @@
         }
       ],
       "scripts": {
-        "test-setup": "export APP_ASSEMBLY=`grep -o '\".*\"' /app/Procfile | perl -pe 's/.\///g' | perl -pe 's/.dll//g'`",
+        "test-setup": "export APP_ASSEMBLY=$(grep -o '\".*\"' /app/Procfile | perl -pe 's/.\///g' | perl -pe 's/.dll//g')",
         "test": "echo 'app: $APP_ASSEMBLY'"
       }
     }
