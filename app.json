@@ -13,8 +13,8 @@
         }
       ],
       "scripts": {
-        "test-setup": "export APP_ASSEMBLY=$(grep -o '\".*\"' /app/Procfile | perl -pe 's/.\///g' | perl -pe 's/.dll//g')",
-        "test": "echo 'app: $APP_ASSEMBLY'"
+        "test-setup": "dotnet --info & dotnet \"/app/$APP_ASSEMBLY/$APP_ASSEMBLY.dll\" >/dev/null 2>&1 & sleep 5",
+        "test": "ps -ef | grep dotnet | grep -v grep | awk '{print $2}' | xargs kill"
       }
     }
   }
